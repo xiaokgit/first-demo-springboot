@@ -11,6 +11,8 @@ public class ScarlettApplicationTests {
 
     @Test
     public void contextLoads() {
+
+        System.out.println("ScarlettApplicationTests contextLoads...");
     }
 
 }
