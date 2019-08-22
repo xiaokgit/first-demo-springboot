@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Room</title>
+    <script src="/js/jquery/jquery.js"></script>
+    <script type="application/javascript">
+        //登录
+        function login() {
+            $.ajax({
+                url: "/auth/login",
+                data: $("#loginForm").serialize(),
+                type: "POST",
+                success: function (data) {
+
+                }
+            });
+        }
+
+        //注销
+        function logout() {
+            socket.close();
+        }
+    </script>
+</head>
+<body>
+
+<form id="loginForm"  >
+    用户名: <input name="username"><br>
+    密&emsp;码: <input name="password">
+    <br>
+    <input type="button" value="登录" onclick="login()" />
+</form>
+</body>
+</html>
